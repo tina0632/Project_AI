@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>電子專題網站</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 2rem;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+        .title {
+            font-size: 2rem;
+            color: black;
+            margin: 1rem 0;
+        }
+        .subtitle {
+            font-size: 1.5rem;
+            color: red;
+            margin: 1rem 0;
+        }
+        .result {
+            font-size: 1.2rem;
+            color: yellow;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>電子專題網站</header>
+    <div class="title">緒論</div>
+    <div class="subtitle">研究架構</div>
+    <div class="result">結果</div>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>智慧家庭電力監控系統的設計與實現</title>
+<style>
+  /* Reset & base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin:0; padding:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  header {
+    background: #1e88e5;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  }
+
+  nav {
+    display: flex;
+    background: #1565c0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    overflow-x: auto;
+  }
+  nav button {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    background: none;
+    border: none;
+    color: #bbdefb;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    white-space: nowrap;
+  }
+  nav button:hover, nav button.active {
+    background: #42a5f5;
+    color: #fff;
+  }
+
+  main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #212121;
+    box-shadow: 0 0 20px rgba(66,165,245,0.3);
+    border-radius: 8px;
+  }
+
+  h2 {
+    color: #42a5f5;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
+
+  /* 簡單視覺化 - 進度條 */
+  .progress-bar {
+    margin-top: 1rem;
+    height: 8px;
+    background: #333;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .progress-bar > div {
+    height: 100%;
+    width: 0;
+    background: #42a5f5;
+    transition: width 0.5s ease;
+  }
+  
+  /* 響應式 */
+  @media (max-width: 600px) {
+    nav button {
+      padding: 0.8rem 1rem;
+      font-size: 0.9rem;
+    }
+    main {
+      padding: 1rem;
+      margin: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>智慧家庭電力監控系統的設計與實現</header>
+
+<nav id="nav">
+  <button class="active" data-section="1">緒論</button>
+  <button data-section="2">文獻探討</button>
+  <button data-section="3">系統需求分析</button>
+  <button data-section="4">系統架構設計</button>
+  <button data-section="5">硬體設計與實作</button>
+  <button data-section="6">軟體開發與介面設計</button>
+  <button data-section="7">通訊與資料傳輸</button>
+  <button data-section="8">實驗方法與系統測試</button>
+  <button data-section="9">結果分析與討論</button>
+  <button data-section="10">結論與未來展望</button>
+</nav>
+
+<main>
+  <h2 id="section-title">緒論</h2>
+  <p id="section-content">
+    本章節介紹智慧家庭電力監控系統的研究背景、目的與重要性，說明專題整體目標與範圍。
+  </p>
+  <div class="progress-bar"><div id="progress"></div></div>
+</main>
+
+<script>
+  const contents = {
+    1: {
+      title: "緒論",
+      content: "本章節介紹智慧家庭電力監控系統的研究背景、目的與重要性，說明專題整體目標與範圍。"
+    },
+    2: {
+      title: "文獻探討",
+      content: "回顧智慧家庭與電力監控相關技術，分析現有系統的優缺點與研究趨勢。"
+    },
+    3: {
+      title: "系統需求分析",
+      content: "詳細說明系統的功能需求與性能指標，定義用戶需求與系統限制。"
+    },
+    4: {
+      title: "系統架構設計",
+      content: "描述整體系統架構，包括硬體組件配置與軟體架構設計。"
+    },
+    5: {
+      title: "硬體設計與實作",
+      content: "介紹硬體電路設計、感測器選擇與接線，以及硬體整合過程。"
+    },
+    6: {
+      title: "軟體開發與介面設計",
+      content: "說明系統軟體開發流程，使用者介面設計與功能實現。"
+    },
+    7: {
+      title: "通訊與資料傳輸",
+      content: "介紹系統中使用的通訊協議與資料傳輸技術，確保數據可靠傳送。"
+    },
+    8: {
+      title: "實驗方法與系統測試",
+      content: "描述實驗流程、測試方法與評估標準，確保系統穩定性與效能。"
+    },
+    9: {
+      title: "結果分析與討論",
+      content: "整理與分析實驗結果，討論系統優缺點與改進空間。"
+    },
+    10: {
+      title: "結論與未來展望",
+      content: "總結專題成果，提出未來研究方向與應用可能。"
+    }
+  };
+
+  const nav = document.getElementById('nav');
+  const buttons = nav.querySelectorAll('button');
+  const sectionTitle = document.getElementById('section-title');
+  const sectionContent = document.getElementById('section-content');
+  const progressBar = document.getElementById('progress');
+
+  function updateContent(section) {
+    sectionTitle.textContent = contents[section].title;
+    sectionContent.textContent = contents[section].content;
+
+    // 更新進度條 (百分比依章節數)
+    const total = Object.keys(contents).length;
+    const percent = (section / total) * 100;
+    progressBar.style.width = percent + '%';
+  }
+
+  nav.addEventListener('click', e => {
+    if(e.target.tagName === 'BUTTON') {
+      buttons.forEach(btn => btn.classList.remove('active'));
+      e.target.classList.add('active');
+      const section = e.target.getAttribute('data-section');
+      updateContent(section);
+    }
+  });
+</script>
+
+</body>
+</html>
